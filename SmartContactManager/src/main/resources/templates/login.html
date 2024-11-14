@@ -1,0 +1,79 @@
+<html th:replace="~{base :: parent(~{::#content},~{::title})}">
+<head>
+    <title>Login Page</title>
+</head>
+<body>
+<div id="content">
+    <div class="flex w-full items-center justify-center min-h-screen">
+        <!-- Child div with 80% width on large and medium screens, full width on small screens -->
+        <div
+                class="w-full md:w-[90%] lg:w-[90%] xl:w-[90%] max-w-4xl bg-gray-500 text-white text-center p-4">
+            <!-- Form to post data to /login -->
+            <form novalidate method="post" data-th-action="@{/authenticate}" class="mt-5"
+                  data-th-object="${user}">
+                <div
+                        class="block p-3 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+                    <div data-th-replace="message :: messagebox"></div>
+                    <h5
+                            class="text-left mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Login
+                        Here</h5>
+                    <p class="text-left font-normal text-gray-700 dark:text-gray-300">Start
+                        managing contacts on cloud...</p>
+                    <!-- 												Display error message if there's any login failure -->
+
+                    <div th:if="${param.logout}">
+                        <p class='text-blue-700 dark:text-green-200' >You have been successfully logged out.</p>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email"
+                               class="text-left block mb-2 text-sm font-medium text-gray-900 dark:text-white">Username</label>
+                        <input type="email" id="email" name="email"
+                               placeholder="your email"
+                               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                               required />
+                    </div>
+                    <div class="mb-3">
+                        <label for="password"
+                               class="text-left block mb-2 text-sm font-medium text-gray-900 dark:text-white">Password</label>
+                        <input type="password" id="password" name="password"
+                               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                               required />
+                    </div>
+                    <div class="mb-5 items-center space-between">
+                        <button type="submit"
+                                class="bg-gray-700 px-4 py-2 rounded-lg text-white
+                            hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500
+                            active:bg-gray-800 active:scale-95 transition-transform duration-150">Login</button>
+                        <button type="reset"
+                                class="bg-gray-700 px-4 py-2 rounded-lg text-white
+                            hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500
+                            active:bg-gray-800 active:scale-95 transition-transform duration-150">Reset</button>
+                    </div>
+                    <!-- 						<div clas='social-buttons-container mt-5 mb-10 flex justify-center'> -->
+                    <!-- 							<a  -->
+                    <!-- 							class='border bg-purple-500 rounded-full px-2 py-1' -->
+                    <!-- 							d>Login With Google</a> -->
+                    <!-- 						</div> <br> -->
+            </form>
+
+            <div class="flex items-center justify-center  dark:bg-gray-800">
+                <a
+                        data-th-href="@{/oauth2/authorization/google}"
+                        class="px-4 py-2 border  rounded-full flex gap-2 border-slate-200 dark:border-slate-700  text-slate-700 dark:text-slate-200 hover:border-slate-400 dark:hover:border-slate-500 hover:text-slate-900 dark:hover:text-slate-300 hover:shadow transition duration-150">
+                    <img class="w-6 h-6" src="https://www.svgrepo.com/show/475656/google-color.svg" loading="lazy" alt="google logo">
+                    <span class='text-gray-600 dark:text-white'>Login with Google</span>
+                </a>
+            </div>
+            <div class="flex mt-4 items-center justify-center  dark:bg-gray-800">
+                <a
+                        data-th-href="@{/oauth2/authorization/github}"
+                        class="px-4 py-2 border  rounded-full flex gap-2 border-slate-200 dark:border-slate-700  text-slate-700 dark:text-slate-200 hover:border-slate-400 dark:hover:border-slate-500 hover:text-slate-900 dark:hover:text-slate-300 hover:shadow transition duration-150">
+                    <img class="w-6 h-6" src="https://cdn.pixabay.com/photo/2022/01/30/13/33/github-6980894_960_720.png" loading="lazy" alt="google logo">
+                    <span class='text-gray-600 dark:text-white'>Login with Github</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

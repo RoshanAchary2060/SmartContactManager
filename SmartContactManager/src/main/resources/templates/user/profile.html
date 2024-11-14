@@ -1,0 +1,11 @@
+<html xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{base :: parent(~{::#content},~{::title})}">
+<head>
+    <title data-th-text="${loggedinuser.name} + ' | SCM'"></title>
+</head>
+<body>
+<div id='content'>
+    Welcome to  Profile Page
+</div>
+</body>
+</html>

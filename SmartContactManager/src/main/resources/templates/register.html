@@ -1,0 +1,90 @@
+<html th:replace="~{base :: parent(~{::#content},~{::title})}">
+<head>
+    <title>Signup Page</title>
+    <!-- Tailwind CSS CDN link -->
+</head>
+<body>
+<div id="content">
+    <div class="flex w-full items-center justify-center min-h-screen">
+        <!-- Child div with 80% width on large and medium screens, full width on small screens -->
+        <div
+                class="w-full md:w-[90%] lg:w-[90%] xl:w-[90%] max-w-4xl bg-gray-500 text-white text-center p-4">
+            <form
+                    method="post"
+                    data-th-action="@{'/do_register'}"
+                    data-th-object="${user}"
+                    class='mt-5'>
+                <div
+                        class="block p-3 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+
+                    <div data-th-replace="message :: messagebox"></div>
+                    <h5
+                            class="text-left mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Signup
+                        Here</h5>
+                    <p class="text-left font-normal text-gray-700 dark:text-gray-400">Start
+                        managing contacts on cloud...</p>
+                    <div class="mb-3 mt-3">
+                        <label for="name"
+                               class="text-left block mb-2 text-sm font-medium text-gray-900 dark:text-white">Name</label>
+                        <input type="text" id="name"
+                               th:field="*{name}"
+
+                               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                               placeholder="your name" required />
+                    </div>
+                    <div class="mb-3">
+                        <label for="email"
+                               class="text-left block mb-2 text-sm font-medium text-gray-900 dark:text-white">Email</label>
+                        <input type="email"
+                               id="email"
+                               th:field="*{email}"
+                               placeholder='your email'
+                               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                               required />
+                    </div>
+                    <div class="mb-3">
+                        <label for="password"
+                               class="text-left block mb-2 text-sm font-medium text-gray-900 dark:text-white">New
+                            Password</label> <input type="password" id="password"
+                                                    th:field="*{password}"
+
+                                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                                    required />
+                    </div>
+                    <div class="mb-3">
+                        <label for="phone"
+                               class="text-left block mb-2 text-sm font-medium text-gray-900 dark:text-white">Contact
+                            Number</label> <input type="text" id="phone"
+                                                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                                  placeholder="your phone"
+                                                  th:field="*{phoneNumber}"
+
+                                                  required />
+                    </div>
+                    <label for="about"
+                           class="text-left block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your
+                        message</label>
+                    <textarea id="about" rows="6"
+                              th:field="*{about}"
+
+                              class="mb-2 block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                              placeholder="Write here..."></textarea>
+                    <div class='mb-3 items-center  space-between'>
+                        <button type="submit"
+                                class="bg-gray-700 px-4 py-2 rounded-lg text-white
+              hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500
+              active:bg-gray-800 active:scale-95 transition-transform duration-150">
+                            Signup</button>
+                        <button type='reset'
+                                class="bg-gray-700 px-4 py-2 rounded-lg text-white
+              hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500
+              active:bg-gray-800 active:scale-95 transition-transform duration-150">
+                            Reset</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

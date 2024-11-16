@@ -33,7 +33,7 @@ public class SecurityConfig {
         });
         // Form login configuration
         http.formLogin(formLogin -> {
-            formLogin.loginPage("/login").loginProcessingUrl("/authenticate").defaultSuccessUrl("/user/dashboard")
+            formLogin.loginPage("/login").loginProcessingUrl("/authenticate").defaultSuccessUrl("/user/profile")
                     .failureForwardUrl("/login?error=true").usernameParameter("email").passwordParameter("password");
         });
         // Logout configuration

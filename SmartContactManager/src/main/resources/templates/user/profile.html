@@ -1,11 +1,20 @@
-<html xmlns:th="http://www.thymeleaf.org"
-      th:replace="~{base :: parent(~{::#content},~{::title})}">
+<html xmlns:th="http://www.thymeleaf.org" th:replace="~{base :: parent(~{::#content},~{::title})}">
+
 <head>
-    <title data-th-text="${loggedinuser.name} + ' | SCM'"></title>
+	<title data-th-text="${loggedinuser.name} + ' | SCM'"></title>
 </head>
+
 <body>
-<div id='content'>
-    Welcome to  Profile Page
-</div>
+	<div id='content' class="flex  space-between" >
+	<div data-th-replace="user/sidebar :: sidebar"></div>
+	<div class="ml-0">
+		
+		Welcome to the profiel page and it's goog to be here with you guys
+
+	</div>
+
+	</div>
+	
 </body>
+
 </html>

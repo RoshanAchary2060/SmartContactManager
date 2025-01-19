@@ -20,6 +20,8 @@ public interface IContactRepo extends JpaRepository<Contacts, String> {
 	@Query("SELECT c FROM Contacts c WHERE c.id = :userId")
 	List<Contacts> findByUserId(@Param("userId") String userId);
 
+	long countByUserUserId(String userId);
+
 	Page<Contacts> findByUserAndNameContainingIgnoreCase(Users user, String name,Pageable pageable);
 
 	Page<Contacts> findByUserAndEmailContainingIgnoreCase(Users user,String email, Pageable pageable);

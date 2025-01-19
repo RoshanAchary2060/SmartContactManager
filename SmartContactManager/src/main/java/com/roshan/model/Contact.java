@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Contact {
-	private String name = "Roshan";
+	private String name;
 	private String email;
 	private String phoneNumber;
 	private String address;
@@ -19,6 +19,7 @@ public class Contact {
 	
 	
 	private MultipartFile picture;
+	private String picturePath;
 	
 	private boolean favorite ;
 	public boolean getFavorite() {

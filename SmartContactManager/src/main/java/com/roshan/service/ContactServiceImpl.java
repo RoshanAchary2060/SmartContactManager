@@ -30,7 +30,7 @@ public class ContactServiceImpl implements IContactService {
 
 	@Override
 	public Contacts update(Contacts contact) {
-		// TODO Auto-generated method stub
+
 		return repo.save(contact);
 	}
 

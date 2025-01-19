@@ -16,7 +16,7 @@
 					<form data-th-action="@{'/user/contacts/search'}">
 						<div
 							class="flex space-x-3 items-center justify-start flex-column flex-wrap md:flex-row space-y-4 md:space-y-0 pb-4 bg-white dark:bg-gray-900">
-							<label for="table-search" class="sr-only">Search</label>
+							<label  class="sr-only">Search</label>
 
 							<div>
 								<select id="countries" name="field"
@@ -93,14 +93,21 @@
 												class="fa-brands fa-linkedin"></i></a>&nbsp;&nbsp;&nbsp;
 										<a data-th-href="@{*{facebookLink}}"><i class="fa-brands fa-facebook"></i></a>
 
+
 									</div>
 								</td>
 								<td class="px-6 py-4">
-									<a href="#"><i class="fa-solid fa-trash"></i></a>&nbsp;&nbsp;&nbsp;
-									<a><i class="fa-solid fa-user-pen"></i></a>&nbsp;&nbsp;&nbsp;
+									<a onclick="return confirmDelete()" data-th-href="@{'/user/contacts/delete/'+${c.id}}"><i class="fa-solid fa-trash"></i></a>&nbsp;&nbsp;&nbsp;
+									<a data-th-href="@{'/user/contacts/view/'+${c.id}}"><i class="fa-solid fa-user-pen"></i></a>&nbsp;&nbsp;&nbsp;
 									<button 
 									th:data-id="${c.id}"
-									th:onclick="loadContactData(this.getAttribute('data-id'))"><i class="fa-solid fa-eye"></i></button>
+									th:onclick="loadContactData(this.getAttribute('data-id'))"><i class="fa-solid fa-eye"></i></button>&nbsp;
+									<br><br>
+									<a class="link-primary rounded border m-2 p-1" data-th-href="@{'/user/contacts/email?email='+${c.email}}">Mail</a>
+
+
+
+
 								</td>
 							</tr>
 

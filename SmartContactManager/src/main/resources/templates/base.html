@@ -1,145 +1,145 @@
 <html class="light text-dark" lang="en" th:fragment="parent(content, title)" xmlns:th="https://www.thymeleaf.org">
 
 <head>
-	<title data-th-replace="${title}"></title>
-	<!-- <link rel='stylesheet' data-th-href="@{'/css/output.css'}" /> -->
-	<style>
-		*,
-		::before,
-		::after {
-			--tw-border-spacing-x: 0;
-			--tw-border-spacing-y: 0;
-			--tw-translate-x: 0;
-			--tw-translate-y: 0;
-			--tw-rotate: 0;
-			--tw-skew-x: 0;
-			--tw-skew-y: 0;
-			--tw-scale-x: 1;
-			--tw-scale-y: 1;
-			--tw-pan-x: ;
-			--tw-pan-y: ;
-			--tw-pinch-zoom: ;
-			--tw-scroll-snap-strictness: proximity;
-			--tw-gradient-from-position: ;
-			--tw-gradient-via-position: ;
-			--tw-gradient-to-position: ;
-			--tw-ordinal: ;
-			--tw-slashed-zero: ;
-			--tw-numeric-figure: ;
-			--tw-numeric-spacing: ;
-			--tw-numeric-fraction: ;
-			--tw-ring-inset: ;
-			--tw-ring-offset-width: 0px;
-			--tw-ring-offset-color: #fff;
-			--tw-ring-color: rgb(59 130 246/ 0.5);
-			--tw-ring-offset-shadow: 0 0 #0000;
-			--tw-ring-shadow: 0 0 #0000;
-			--tw-shadow: 0 0 #0000;
-			--tw-shadow-colored: 0 0 #0000;
-			--tw-blur: ;
-			--tw-brightness: ;
-			--tw-contrast: ;
-			--tw-grayscale: ;
-			--tw-hue-rotate: ;
-			--tw-invert: ;
-			--tw-saturate: ;
-			--tw-sepia: ;
-			--tw-drop-shadow: ;
-			--tw-backdrop-blur: ;
-			--tw-backdrop-brightness: ;
-			--tw-backdrop-contrast: ;
-			--tw-backdrop-grayscale: ;
-			--tw-backdrop-hue-rotate: ;
-			--tw-backdrop-invert: ;
-			--tw-backdrop-opacity: ;
-			--tw-backdrop-saturate: ;
-			--tw-backdrop-sepia: ;
-			--tw-contain-size: ;
-			--tw-contain-layout: ;
-			--tw-contain-paint: ;
-			--tw-contain-style: ;
-		}
+    <title data-th-replace="${title}"></title>
+    <!-- <link rel='stylesheet' data-th-href="@{'/css/output.css'}" /> -->
+    <style>
+        *,
+        ::before,
+        ::after {
+            --tw-border-spacing-x: 0;
+            --tw-border-spacing-y: 0;
+            --tw-translate-x: 0;
+            --tw-translate-y: 0;
+            --tw-rotate: 0;
+            --tw-skew-x: 0;
+            --tw-skew-y: 0;
+            --tw-scale-x: 1;
+            --tw-scale-y: 1;
+            --tw-pan-x: ;
+            --tw-pan-y: ;
+            --tw-pinch-zoom: ;
+            --tw-scroll-snap-strictness: proximity;
+            --tw-gradient-from-position: ;
+            --tw-gradient-via-position: ;
+            --tw-gradient-to-position: ;
+            --tw-ordinal: ;
+            --tw-slashed-zero: ;
+            --tw-numeric-figure: ;
+            --tw-numeric-spacing: ;
+            --tw-numeric-fraction: ;
+            --tw-ring-inset: ;
+            --tw-ring-offset-width: 0px;
+            --tw-ring-offset-color: #fff;
+            --tw-ring-color: rgb(59 130 246/ 0.5);
+            --tw-ring-offset-shadow: 0 0 #0000;
+            --tw-ring-shadow: 0 0 #0000;
+            --tw-shadow: 0 0 #0000;
+            --tw-shadow-colored: 0 0 #0000;
+            --tw-blur: ;
+            --tw-brightness: ;
+            --tw-contrast: ;
+            --tw-grayscale: ;
+            --tw-hue-rotate: ;
+            --tw-invert: ;
+            --tw-saturate: ;
+            --tw-sepia: ;
+            --tw-drop-shadow: ;
+            --tw-backdrop-blur: ;
+            --tw-backdrop-brightness: ;
+            --tw-backdrop-contrast: ;
+            --tw-backdrop-grayscale: ;
+            --tw-backdrop-hue-rotate: ;
+            --tw-backdrop-invert: ;
+            --tw-backdrop-opacity: ;
+            --tw-backdrop-saturate: ;
+            --tw-backdrop-sepia: ;
+            --tw-contain-size: ;
+            --tw-contain-layout: ;
+            --tw-contain-paint: ;
+            --tw-contain-style: ;
+        }
 
-		::backdrop {
-			--tw-border-spacing-x: 0;
-			--tw-border-spacing-y: 0;
-			--tw-translate-x: 0;
-			--tw-translate-y: 0;
-			--tw-rotate: 0;
-			--tw-skew-x: 0;
-			--tw-skew-y: 0;
-			--tw-scale-x: 1;
-			--tw-scale-y: 1;
-			--tw-pan-x: ;
-			--tw-pan-y: ;
-			--tw-pinch-zoom: ;
-			--tw-scroll-snap-strictness: proximity;
-			--tw-gradient-from-position: ;
-			--tw-gradient-via-position: ;
-			--tw-gradient-to-position: ;
-			--tw-ordinal: ;
-			--tw-slashed-zero: ;
-			--tw-numeric-figure: ;
-			--tw-numeric-spacing: ;
-			--tw-numeric-fraction: ;
-			--tw-ring-inset: ;
-			--tw-ring-offset-width: 0px;
-			--tw-ring-offset-color: #fff;
-			--tw-ring-color: rgb(59 130 246/ 0.5);
-			--tw-ring-offset-shadow: 0 0 #0000;
-			--tw-ring-shadow: 0 0 #0000;
-			--tw-shadow: 0 0 #0000;
-			--tw-shadow-colored: 0 0 #0000;
-			--tw-blur: ;
-			--tw-brightness: ;
-			--tw-contrast: ;
-			--tw-grayscale: ;
-			--tw-hue-rotate: ;
-			--tw-invert: ;
-			--tw-saturate: ;
-			--tw-sepia: ;
-			--tw-drop-shadow: ;
-			--tw-backdrop-blur: ;
-			--tw-backdrop-brightness: ;
-			--tw-backdrop-contrast: ;
-			--tw-backdrop-grayscale: ;
-			--tw-backdrop-hue-rotate: ;
-			--tw-backdrop-invert: ;
-			--tw-backdrop-opacity: ;
-			--tw-backdrop-saturate: ;
-			--tw-backdrop-sepia: ;
-			--tw-contain-size: ;
-			--tw-contain-layout: ;
-			--tw-contain-paint: ;
-			--tw-contain-style: ;
-		}
+        ::backdrop {
+            --tw-border-spacing-x: 0;
+            --tw-border-spacing-y: 0;
+            --tw-translate-x: 0;
+            --tw-translate-y: 0;
+            --tw-rotate: 0;
+            --tw-skew-x: 0;
+            --tw-skew-y: 0;
+            --tw-scale-x: 1;
+            --tw-scale-y: 1;
+            --tw-pan-x: ;
+            --tw-pan-y: ;
+            --tw-pinch-zoom: ;
+            --tw-scroll-snap-strictness: proximity;
+            --tw-gradient-from-position: ;
+            --tw-gradient-via-position: ;
+            --tw-gradient-to-position: ;
+            --tw-ordinal: ;
+            --tw-slashed-zero: ;
+            --tw-numeric-figure: ;
+            --tw-numeric-spacing: ;
+            --tw-numeric-fraction: ;
+            --tw-ring-inset: ;
+            --tw-ring-offset-width: 0px;
+            --tw-ring-offset-color: #fff;
+            --tw-ring-color: rgb(59 130 246/ 0.5);
+            --tw-ring-offset-shadow: 0 0 #0000;
+            --tw-ring-shadow: 0 0 #0000;
+            --tw-shadow: 0 0 #0000;
+            --tw-shadow-colored: 0 0 #0000;
+            --tw-blur: ;
+            --tw-brightness: ;
+            --tw-contrast: ;
+            --tw-grayscale: ;
+            --tw-hue-rotate: ;
+            --tw-invert: ;
+            --tw-saturate: ;
+            --tw-sepia: ;
+            --tw-drop-shadow: ;
+            --tw-backdrop-blur: ;
+            --tw-backdrop-brightness: ;
+            --tw-backdrop-contrast: ;
+            --tw-backdrop-grayscale: ;
+            --tw-backdrop-hue-rotate: ;
+            --tw-backdrop-invert: ;
+            --tw-backdrop-opacity: ;
+            --tw-backdrop-saturate: ;
+            --tw-backdrop-sepia: ;
+            --tw-contain-size: ;
+            --tw-contain-layout: ;
+            --tw-contain-paint: ;
+            --tw-contain-style: ;
+        }
 
-		/*
+        /*
         ! tailwindcss v3.4.14 | MIT License | https://tailwindcss.com
         */
-		/*
+        /*
         1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
         2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
         */
-		*,
-		::before,
-		::after {
-			box-sizing: border-box;
-			/* 1 */
-			border-width: 0;
-			/* 2 */
-			border-style: solid;
-			/* 2 */
-			border-color: #e5e7eb;
-			/* 2 */
-		}
+        *,
+        ::before,
+        ::after {
+            box-sizing: border-box;
+            /* 1 */
+            border-width: 0;
+            /* 2 */
+            border-style: solid;
+            /* 2 */
+            border-color: #e5e7eb;
+            /* 2 */
+        }
 
-		::before,
-		::after {
-			--tw-content: '';
-		}
+        ::before,
+        ::after {
+            --tw-content: '';
+        }
 
-		/*
+        /*
         1. Use a consistent sensible line-height in all browsers.
         2. Prevent adjustments of font size after orientation changes in iOS.
         3. Use a more readable tab size.
@@ -148,649 +148,795 @@
         6. Use the user's configured `sans` font-variation-settings by default.
         7. Disable tap highlights on iOS
         */
-		html,
-		:host {
-			line-height: 1.5;
-			/* 1 */
-			-webkit-text-size-adjust: 100%;
-			/* 2 */
-			-moz-tab-size: 4;
-			/* 3 */
-			-o-tab-size: 4;
-			tab-size: 4;
-			/* 3 */
-			font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
-				"Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-			/* 4 */
-			font-feature-settings: normal;
-			/* 5 */
-			font-variation-settings: normal;
-			/* 6 */
-			-webkit-tap-highlight-color: transparent;
-			/* 7 */
-		}
+        html,
+        :host {
+            line-height: 1.5;
+            /* 1 */
+            -webkit-text-size-adjust: 100%;
+            /* 2 */
+            -moz-tab-size: 4;
+            /* 3 */
+            -o-tab-size: 4;
+            tab-size: 4;
+            /* 3 */
+            font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+                "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+            /* 4 */
+            font-feature-settings: normal;
+            /* 5 */
+            font-variation-settings: normal;
+            /* 6 */
+            -webkit-tap-highlight-color: transparent;
+            /* 7 */
+        }
 
-		/*
+        /*
         1. Remove the margin in all browsers.
         2. Inherit line-height from `html` so users can set them as a class directly on the `html` element.
         */
-		body {
-			margin: 0;
-			/* 1 */
-			line-height: inherit;
-			/* 2 */
-		}
+        body {
+            margin: 0;
+            /* 1 */
+            line-height: inherit;
+            /* 2 */
+        }
 
-		/*
+        /*
         1. Add the correct height in Firefox.
         2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
         3. Ensure horizontal rules are visible by default.
         */
-		hr {
-			height: 0;
-			/* 1 */
-			color: inherit;
-			/* 2 */
-			border-top-width: 1px;
-			/* 3 */
-		}
+        hr {
+            height: 0;
+            /* 1 */
+            color: inherit;
+            /* 2 */
+            border-top-width: 1px;
+            /* 3 */
+        }
 
-		/*
+        /*
         Add the correct text decoration in Chrome, Edge, and Safari.
         */
-		abbr:where([title]) {
-			-webkit-text-decoration: underline dotted;
-			text-decoration: underline dotted;
-		}
+        abbr:where([title]) {
+            -webkit-text-decoration: underline dotted;
+            text-decoration: underline dotted;
+        }
 
-		/*
+        /*
         Remove the default font size and weight for headings.
         */
-		h1,
-		h2,
-		h3,
-		h4,
-		h5,
-		h6 {
-			font-size: inherit;
-			font-weight: inherit;
-		}
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-size: inherit;
+            font-weight: inherit;
+        }
 
-		/*
+        /*
         Reset links to optimize for opt-in styling instead of opt-out.
         */
-		a {
-			color: inherit;
-			text-decoration: inherit;
-		}
+        a {
+            color: inherit;
+            text-decoration: inherit;
+        }
 
-		/*
+        /*
         Add the correct font weight in Edge and Safari.
         */
-		b,
-		strong {
-			font-weight: bolder;
-		}
+        b,
+        strong {
+            font-weight: bolder;
+        }
 
-		/*
+        /*
         1. Use the user's configured `mono` font-family by default.
         2. Use the user's configured `mono` font-feature-settings by default.
         3. Use the user's configured `mono` font-variation-settings by default.
         4. Correct the odd `em` font sizing in all browsers.
         */
-		code,
-		kbd,
-		samp,
-		pre {
-			font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
-				"Liberation Mono", "Courier New", monospace;
-			/* 1 */
-			font-feature-settings: normal;
-			/* 2 */
-			font-variation-settings: normal;
-			/* 3 */
-			font-size: 1em;
-			/* 4 */
-		}
+        code,
+        kbd,
+        samp,
+        pre {
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+                "Liberation Mono", "Courier New", monospace;
+            /* 1 */
+            font-feature-settings: normal;
+            /* 2 */
+            font-variation-settings: normal;
+            /* 3 */
+            font-size: 1em;
+            /* 4 */
+        }
 
-		/*
+        /*
         Add the correct font size in all browsers.
         */
-		small {
-			font-size: 80%;
-		}
+        small {
+            font-size: 80%;
+        }
 
-		/*
+        /*
         Prevent `sub` and `sup` elements from affecting the line height in all browsers.
         */
-		sub,
-		sup {
-			font-size: 75%;
-			line-height: 0;
-			position: relative;
-			vertical-align: baseline;
-		}
+        sub,
+        sup {
+            font-size: 75%;
+            line-height: 0;
+            position: relative;
+            vertical-align: baseline;
+        }
 
-		sub {
-			bottom: -0.25em;
-		}
+        sub {
+            bottom: -0.25em;
+        }
 
-		sup {
-			top: -0.5em;
-		}
+        sup {
+            top: -0.5em;
+        }
 
-		/*
+        /*
         1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
         2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
         3. Remove gaps between table borders by default.
         */
-		table {
-			text-indent: 0;
-			/* 1 */
-			border-color: inherit;
-			/* 2 */
-			border-collapse: collapse;
-			/* 3 */
-		}
+        table {
+            text-indent: 0;
+            /* 1 */
+            border-color: inherit;
+            /* 2 */
+            border-collapse: collapse;
+            /* 3 */
+        }
 
-		/*
+        /*
         1. Change the font styles in all browsers.
         2. Remove the margin in Firefox and Safari.
         3. Remove default padding in all browsers.
         */
-		button,
-		input,
-		optgroup,
-		select,
-		textarea {
-			font-family: inherit;
-			/* 1 */
-			font-feature-settings: inherit;
-			/* 1 */
-			font-variation-settings: inherit;
-			/* 1 */
-			font-size: 100%;
-			/* 1 */
-			font-weight: inherit;
-			/* 1 */
-			line-height: inherit;
-			/* 1 */
-			letter-spacing: inherit;
-			/* 1 */
-			color: inherit;
-			/* 1 */
-			margin: 0;
-			/* 2 */
-			padding: 0;
-			/* 3 */
-		}
+        button,
+        input,
+        optgroup,
+        select,
+        textarea {
+            font-family: inherit;
+            /* 1 */
+            font-feature-settings: inherit;
+            /* 1 */
+            font-variation-settings: inherit;
+            /* 1 */
+            font-size: 100%;
+            /* 1 */
+            font-weight: inherit;
+            /* 1 */
+            line-height: inherit;
+            /* 1 */
+            letter-spacing: inherit;
+            /* 1 */
+            color: inherit;
+            /* 1 */
+            margin: 0;
+            /* 2 */
+            padding: 0;
+            /* 3 */
+        }
 
-		/*
+        /*
         Remove the inheritance of text transform in Edge and Firefox.
         */
-		button,
-		select {
-			text-transform: none;
-		}
+        button,
+        select {
+            text-transform: none;
+        }
 
-		/*
+        /*
         1. Correct the inability to style clickable types in iOS and Safari.
         2. Remove default button styles.
         */
-		button,
-		input:where([type='button']),
-		input:where([type='reset']),
-		input:where([type='submit']) {
-			-webkit-appearance: button;
-			/* 1 */
-			background-color: transparent;
-			/* 2 */
-			background-image: none;
-			/* 2 */
-		}
+        button,
+        input:where([type='button']),
+        input:where([type='reset']),
+        input:where([type='submit']) {
+            -webkit-appearance: button;
+            /* 1 */
+            background-color: transparent;
+            /* 2 */
+            background-image: none;
+            /* 2 */
+        }
 
-		/*
+        /*
         Use the modern Firefox focus style for all focusable elements.
         */
-		:-moz-focusring {
-			outline: auto;
-		}
+        :-moz-focusring {
+            outline: auto;
+        }
 
-		/*
+        /*
         Remove the additional `:invalid` styles in Firefox. (https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737)
         */
-		:-moz-ui-invalid {
-			box-shadow: none;
-		}
+        :-moz-ui-invalid {
+            box-shadow: none;
+        }
 
-		/*
+        /*
         Add the correct vertical alignment in Chrome and Firefox.
         */
-		progress {
-			vertical-align: baseline;
-		}
+        progress {
+            vertical-align: baseline;
+        }
 
-		/*
+        /*
         Correct the cursor style of increment and decrement buttons in Safari.
         */
-		::-webkit-inner-spin-button,
-		::-webkit-outer-spin-button {
-			height: auto;
-		}
+        ::-webkit-inner-spin-button,
+        ::-webkit-outer-spin-button {
+            height: auto;
+        }
 
-		/*
+        /*
         1. Correct the odd appearance in Chrome and Safari.
         2. Correct the outline style in Safari.
         */
-		[type='search'] {
-			-webkit-appearance: textfield;
-			/* 1 */
-			outline-offset: -2px;
-			/* 2 */
-		}
+        [type='search'] {
+            -webkit-appearance: textfield;
+            /* 1 */
+            outline-offset: -2px;
+            /* 2 */
+        }
 
-		/*
+        /*
         Remove the inner padding in Chrome and Safari on macOS.
         */
-		::-webkit-search-decoration {
-			-webkit-appearance: none;
-		}
+        ::-webkit-search-decoration {
+            -webkit-appearance: none;
+        }
 
-		/*
+        /*
         1. Correct the inability to style clickable types in iOS and Safari.
         2. Change font properties to `inherit` in Safari.
         */
-		::-webkit-file-upload-button {
-			-webkit-appearance: button;
-			/* 1 */
-			font: inherit;
-			/* 2 */
-		}
+        ::-webkit-file-upload-button {
+            -webkit-appearance: button;
+            /* 1 */
+            font: inherit;
+            /* 2 */
+        }
 
-		/*
+        /*
         Add the correct display in Chrome and Safari.
         */
-		summary {
-			display: list-item;
-		}
+        summary {
+            display: list-item;
+        }
 
-		/*
+        /*
         Removes the default spacing and border for appropriate elements.
         */
-		blockquote,
-		dl,
-		dd,
-		h1,
-		h2,
-		h3,
-		h4,
-		h5,
-		h6,
-		hr,
-		figure,
-		p,
-		pre {
-			margin: 0;
-		}
+        blockquote,
+        dl,
+        dd,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        hr,
+        figure,
+        p,
+        pre {
+            margin: 0;
+        }
 
-		fieldset {
-			margin: 0;
-			padding: 0;
-		}
+        fieldset {
+            margin: 0;
+            padding: 0;
+        }
 
-		legend {
-			padding: 0;
-		}
+        legend {
+            padding: 0;
+        }
 
-		ol,
-		ul,
-		menu {
-			list-style: none;
-			margin: 0;
-			padding: 0;
-		}
+        ol,
+        ul,
+        menu {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
 
-		/*
+        /*
         Reset default styling for dialogs.
         */
-		dialog {
-			padding: 0;
-		}
+        dialog {
+            padding: 0;
+        }
 
-		/*
+        /*
         Prevent resizing textareas horizontally by default.
         */
-		textarea {
-			resize: vertical;
-		}
+        textarea {
+            resize: vertical;
+        }
 
-		/*
+        /*
         1. Reset the default placeholder opacity in Firefox. (https://github.com/tailwindlabs/tailwindcss/issues/3300)
         2. Set the default placeholder color to the user's configured gray 400 color.
         */
-		input::-moz-placeholder,
-		textarea::-moz-placeholder {
-			opacity: 1;
-			/* 1 */
-			color: #9ca3af;
-			/* 2 */
-		}
+        input::-moz-placeholder,
+        textarea::-moz-placeholder {
+            opacity: 1;
+            /* 1 */
+            color: #9ca3af;
+            /* 2 */
+        }
 
-		input::placeholder,
-		textarea::placeholder {
-			opacity: 1;
-			/* 1 */
-			color: #9ca3af;
-			/* 2 */
-		}
+        input::placeholder,
+        textarea::placeholder {
+            opacity: 1;
+            /* 1 */
+            color: #9ca3af;
+            /* 2 */
+        }
 
-		/*
+        /*
         Set the default cursor for buttons.
         */
-		button,
-		[role="button"] {
-			cursor: pointer;
-		}
+        button,
+        [role="button"] {
+            cursor: pointer;
+        }
 
-		/*
+        /*
         Make sure disabled buttons don't get the pointer cursor.
         */
-		:disabled {
-			cursor: default;
-		}
+        :disabled {
+            cursor: default;
+        }
 
-		/*
+        /*
         1. Make replaced elements `display: block` by default. (https://github.com/mozdevs/cssremedy/issues/14)
         2. Add `vertical-align: middle` to align replaced elements more sensibly by default. (https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210)
            This can trigger a poorly considered lint error in some tools but is included by design.
         */
-		img,
-		svg,
-		video,
-		canvas,
-		audio,
-		iframe,
-		embed,
-		object {
-			display: block;
-			/* 1 */
-			vertical-align: middle;
-			/* 2 */
-		}
+        img,
+        svg,
+        video,
+        canvas,
+        audio,
+        iframe,
+        embed,
+        object {
+            display: block;
+            /* 1 */
+            vertical-align: middle;
+            /* 2 */
+        }
 
-		/*
+        /*
         Constrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)
         */
-		img,
-		video {
-			max-width: 100%;
-			height: auto;
-		}
+        img,
+        video {
+            max-width: 100%;
+            height: auto;
+        }
 
-		/* Make elements with the HTML hidden attribute stay hidden by default */
-		[hidden]:where(:not([hidden="until-found"])) {
-			display: none;
-		}
+        /* Make elements with the HTML hidden attribute stay hidden by default */
+        [hidden]:where(:not([hidden="until-found"])) {
+            display: none;
+        }
 
-		.mb-2 {
-			margin-bottom: 0.5rem;
-		}
+        .mb-2 {
+            margin-bottom: 0.5rem;
+        }
 
-		.block {
-			display: block;
-		}
+        .block {
+            display: block;
+        }
 
-		.max-w-sm {
-			max-width: 24rem;
-		}
+        .max-w-sm {
+            max-width: 24rem;
+        }
 
-		.rounded-lg {
-			border-radius: 0.5rem;
-		}
+        .rounded-lg {
+            border-radius: 0.5rem;
+        }
 
-		.border {
-			border-width: 1px;
-		}
+        .border {
+            border-width: 1px;
+        }
 
-		.border-gray-200 {
-			--tw-border-opacity: 1;
-			border-color: rgb(229, 231, 235/ var(--tw-border-opacity));
-		}
+        .border-gray-200 {
+            --tw-border-opacity: 1;
+            border-color: rgb(229, 231, 235/ var(--tw-border-opacity));
+        }
 
-		.bg-gray-400 {
-			--tw-bg-opacity: 1;
-			background-color: rgb(156, 163, 175/ var(--tw-bg-opacity));
-		}
+        .bg-gray-400 {
+            --tw-bg-opacity: 1;
+            background-color: rgb(156, 163, 175/ var(--tw-bg-opacity));
+        }
 
-		.bg-white {
-			--tw-bg-opacity: 1;
-			background-color: rgb(255, 255, 255/ var(--tw-bg-opacity));
-		}
+        .bg-white {
+            --tw-bg-opacity: 1;
+            background-color: rgb(255, 255, 255/ var(--tw-bg-opacity));
+        }
 
-		.p-6 {
-			padding: 1.5rem;
-		}
+        .p-6 {
+            padding: 1.5rem;
+        }
 
-		.text-center {
-			text-align: center;
-		}
+        .text-center {
+            text-align: center;
+        }
 
-		.text-2xl {
-			font-size: 1.5rem;
-			line-height: 2rem;
-		}
+        .text-2xl {
+            font-size: 1.5rem;
+            line-height: 2rem;
+        }
 
-		.font-bold {
-			font-weight: 700;
-		}
+        .font-bold {
+            font-weight: 700;
+        }
 
-		.font-normal {
-			font-weight: 400;
-		}
+        .font-normal {
+            font-weight: 400;
+        }
 
-		.tracking-tight {
-			letter-spacing: -0.025em;
-		}
+        .tracking-tight {
+            letter-spacing: -0.025em;
+        }
 
-		.text-gray-700 {
-			--tw-text-opacity: 1;
-			color: rgb(55, 65, 81/ var(--tw-text-opacity));
-		}
+        .text-gray-700 {
+            --tw-text-opacity: 1;
+            color: rgb(55, 65, 81/ var(--tw-text-opacity));
+        }
 
-		.text-gray-900 {
-			--tw-text-opacity: 1;
-			color: rgb(17, 24, 39/ var(--tw-text-opacity));
-		}
+        .text-gray-900 {
+            --tw-text-opacity: 1;
+            color: rgb(17, 24, 39/ var(--tw-text-opacity));
+        }
 
-		.shadow {
-			--tw-shadow: 0 1px 3px 0 rgb(0 0 0/ 0.1), 0 1px 2px -1px rgb(0 0 0/ 0.1);
-			--tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
-			box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
-				var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-		}
+        .shadow {
+            --tw-shadow: 0 1px 3px 0 rgb(0 0 0/ 0.1), 0 1px 2px -1px rgb(0 0 0/ 0.1);
+            --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
+            box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+                var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+        }
 
-		.hover\:bg-gray-100:hover {
-			--tw-bg-opacity: 1;
-			background-color: rgb(243, 244, 246/ var(--tw-bg-opacity));
-		}
+        .hover\:bg-gray-100:hover {
+            --tw-bg-opacity: 1;
+            background-color: rgb(243, 244, 246/ var(--tw-bg-opacity));
+        }
 
-		.dark\:border-gray-700:is(.dark *) {
-			--tw-border-opacity: 1;
-			border-color: rgb(55, 65, 81/ var(--tw-border-opacity));
-		}
+        .dark\:border-gray-700:is(.dark *) {
+            --tw-border-opacity: 1;
+            border-color: rgb(55, 65, 81/ var(--tw-border-opacity));
+        }
 
-		.dark\:bg-gray-800:is(.dark *) {
-			--tw-bg-opacity: 1;
-			background-color: rgb(31, 41, 55/ var(--tw-bg-opacity));
-		}
+        .dark\:bg-gray-800:is(.dark *) {
+            --tw-bg-opacity: 1;
+            background-color: rgb(31, 41, 55/ var(--tw-bg-opacity));
+        }
 
-		.dark\:bg-gray-900:is(.dark *) {
-			--tw-bg-opacity: 1;
-			background-color: rgb(17, 24, 39/ var(--tw-bg-opacity));
-		}
+        .dark\:bg-gray-900:is(.dark *) {
+            --tw-bg-opacity: 1;
+            background-color: rgb(17, 24, 39/ var(--tw-bg-opacity));
+        }
 
-		.dark\:bg-gray-950:is(.dark *) {
-			--tw-bg-opacity: 1;
-			background-color: rgb(3, 7, 18/ var(--tw-bg-opacity));
-		}
+        .dark\:bg-gray-950:is(.dark *) {
+            --tw-bg-opacity: 1;
+            background-color: rgb(3, 7, 18/ var(--tw-bg-opacity));
+        }
 
-		.dark\:text-gray-400:is(.dark *) {
-			--tw-text-opacity: 1;
-			color: rgb(156, 163, 175/ var(--tw-text-opacity));
-		}
+        .dark\:text-gray-400:is(.dark *) {
+            --tw-text-opacity: 1;
+            color: rgb(156, 163, 175/ var(--tw-text-opacity));
+        }
 
-		.dark\:text-white:is(.dark *) {
-			--tw-text-opacity: 1;
-			color: rgb(255, 255, 255/ var(--tw-text-opacity));
-		}
+        .dark\:text-white:is(.dark *) {
+            --tw-text-opacity: 1;
+            color: rgb(255, 255, 255/ var(--tw-text-opacity));
+        }
 
-		.dark\:hover\:bg-gray-700:hover:is(.dark *) {
-			--tw-bg-opacity: 1;
-			background-color: rgb(55, 65, 81/ var(--tw-bg-opacity));
-		}
-	</style>
-	<link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-		integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-		crossorigin="anonymous" referrerpolicy="no-referrer" />
+        .dark\:hover\:bg-gray-700:hover:is(.dark *) {
+            --tw-bg-opacity: 1;
+            background-color: rgb(55, 65, 81/ var(--tw-bg-opacity));
+        }
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+          integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
 </head>
 
 <body class="dark:bg-gray-800 text-white">
-	<div th:if="${loggedinuser}">
-		<div data-th-replace="user/user_navbar :: user_navbar"></div>
-	</div>
-	<!--	<div th:if="${loggedinuser}">-->
-	<!--		<div data-th-replace="user/sidebar :: sidebar"></div>-->
-	<!--	</div>-->
+<div th:if="${loggedinuser}">
+    <div data-th-replace="user/user_navbar :: user_navbar"></div>
+</div>
+<!--	<div th:if="${loggedinuser}">-->
+<!--		<div data-th-replace="user/sidebar :: sidebar"></div>-->
+<!--	</div>-->
 
-	<!-- Navbar Section -->
-	<!-- 	<div th:if="${user == null}" data-th-replace="navbar :: navbar"></div> -->
-	<div th:if="${loggedinuser == null}">
-		<div data-th-replace="navbar :: navbar"></div>
-	</div>
-	<!-- Main Content Area (Text Color Controlled Here) -->
-	<div id="content-area" class="p-4">
-		<!-- This section gets replaced dynamically with the page content (home, about, etc.) -->
-		<section data-th-replace="${content}"></section>
-	</div>
-	<!-- 	<footer class='p-4'>Learn Code With Rn Dai</footer> -->
-	<script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
-	<!-- 	<script data-th-src="@{'/js/script.js'}"></script> -->
-	<script>
-		document
-			.addEventListener(
-				'DOMContentLoaded',
-				function () {
-					const themeToggleButton = document
-						.getElementById('theme_change_button');
-					const themeButtonText = document
-						.getElementById('theme_button_text');
-					const contentArea = document
-						.getElementById('content-area'); // The content div where text color should change
-					// Check saved theme in localStorage
-					const savedTheme = localStorage.getItem('theme');
-					console.log("Saved theme: ", savedTheme); // Debugging: Check the saved theme
-					// Function to apply the theme
-					function applyTheme(theme) {
-						console.log("Applying theme:", theme); // Debugging: Check which theme is applied
-						// Apply the 'dark' class to the <html> element based on the theme
-						if (theme === 'dark') {
-							document.documentElement.classList
-								.add('dark');
-							document.body.classList.add('text-white'); // Text color for dark mode
-							document.body.classList
-								.remove('text-black');
-							contentArea.classList.remove('text-black'); // Ensure text in content-area is white in dark mode
-							contentArea.classList.add('text-white');
-						} else {
-							document.documentElement.classList
-								.remove('dark');
-							document.body.classList.add('text-black'); // Text color for light mode
-							document.body.classList
-								.remove('text-white');
-							contentArea.classList.remove('text-white'); // Ensure text in content-area is black in light mode
-							contentArea.classList.add('text-black');
-						}
-						// Update the button text based on the current theme
-						themeButtonText.textContent = document.documentElement.classList
-							.contains('dark') ? 'Light' : 'Dark';
-					}
-					// Apply saved theme or default to light mode
-					if (savedTheme) {
-						applyTheme(savedTheme);
-					} else {
-						applyTheme('light'); // Default to light theme if no saved theme
-					}
-					// Toggle the theme when the button is clicked
-					themeToggleButton
-						.addEventListener(
-							'click',
-							function () {
-								console.log("Button clicked!"); // Debugging: Check if button click is being captured
-								const currentTheme = document.documentElement.classList
-									.contains('dark') ? 'dark'
-									: 'light';
-								const newTheme = currentTheme === 'dark' ? 'light'
-									: 'dark';
-								console.log(
-									"Toggling theme to:",
-									newTheme); // Debugging: Check which theme is toggled
-								applyTheme(newTheme);
-								localStorage.setItem('theme',
-									newTheme); // Save the new theme in localStorage
-							});
-				});
-	</script>
-	<script>
-		// for contacts.html
-		const viewContactModal = document.getElementById("view_contact_modal");
-		const options = {
-			placement: 'bottom-right',
-			backdrop: 'dynamic',
-			backdropClasses:
-				'bg-gray-900/50 dark:bg-gray-900/80 fixed inset-0 z-40',
-			closable: true,
-			onHide: () => {
-				console.log('modal is hidden');
-			},
-			onShow: () => {
-				console.log('modal is shown');
-			},
-			onToggle: () => {
-				console.log('modal has been toggled');
-			},
-		};
+<!-- Navbar Section -->
+<!-- 	<div th:if="${user == null}" data-th-replace="navbar :: navbar"></div> -->
+<div th:if="${loggedinuser == null}">
+    <div data-th-replace="navbar :: navbar"></div>
+</div>
+<!-- Main Content Area (Text Color Controlled Here) -->
+<div id="content-area" class="p-4">
+    <!-- This section gets replaced dynamically with the page content (home, about, etc.) -->
+    <section data-th-replace="${content}"></section>
+</div>
+<!-- 	<footer class='p-4'>Learn Code With Rn Dai</footer> -->
+<script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+<!-- 	<script data-th-src="@{'/js/script.js'}"></script> -->
+<script>
+    document
+        .addEventListener(
+            'DOMContentLoaded',
+            function () {
+                const themeToggleButton = document
+                    .getElementById('theme_change_button');
+                const themeButtonText = document
+                    .getElementById('theme_button_text');
+                const contentArea = document
+                    .getElementById('content-area'); // The content div where text color should change
+                // Check saved theme in localStorage
+                const savedTheme = localStorage.getItem('theme');
+                console.log("Saved theme: ", savedTheme); // Debugging: Check the saved theme
+                // Function to apply the theme
+                function applyTheme(theme) {
+                    console.log("Applying theme:", theme); // Debugging: Check which theme is applied
+                    // Apply the 'dark' class to the <html> element based on the theme
+                    if (theme === 'dark') {
+                        document.documentElement.classList
+                            .add('dark');
+                        document.body.classList.add('text-white'); // Text color for dark mode
+                        document.body.classList
+                            .remove('text-black');
+                        contentArea.classList.remove('text-black'); // Ensure text in content-area is white in dark mode
+                        contentArea.classList.add('text-white');
+                    } else {
+                        document.documentElement.classList
+                            .remove('dark');
+                        document.body.classList.add('text-black'); // Text color for light mode
+                        document.body.classList
+                            .remove('text-white');
+                        contentArea.classList.remove('text-white'); // Ensure text in content-area is black in light mode
+                        contentArea.classList.add('text-black');
+                    }
+                    // Update the button text based on the current theme
+                    themeButtonText.textContent = document.documentElement.classList
+                        .contains('dark') ? 'Light' : 'Dark';
+                }
+                // Apply saved theme or default to light mode
+                if (savedTheme) {
+                    applyTheme(savedTheme);
+                } else {
+                    applyTheme('light'); // Default to light theme if no saved theme
+                }
+                // Toggle the theme when the button is clicked
+                themeToggleButton
+                    .addEventListener(
+                        'click',
+                        function () {
+                            console.log("Button clicked!"); // Debugging: Check if button click is being captured
+                            const currentTheme = document.documentElement.classList
+                                .contains('dark') ? 'dark'
+                                : 'light';
+                            const newTheme = currentTheme === 'dark' ? 'light'
+                                : 'dark';
+                            console.log(
+                                "Toggling theme to:",
+                                newTheme); // Debugging: Check which theme is toggled
+                            applyTheme(newTheme);
+                            localStorage.setItem('theme',
+                                newTheme); // Save the new theme in localStorage
+                        });
+            });
+</script>
+<script>
+    const viewContactModal = document.getElementById("view_contact_modal");
+    var favorite = false;
+    const options = {
+        placement: 'bottom-right',
+        backdrop: 'dynamic',
+        backdropClasses:
+            'bg-gray-900/50 dark:bg-gray-900/80 fixed inset-0 z-40',
+        closable: true,
+        onHide: () => {
+            console.log('modal is hidden');
+        },
+        onShow: () => {
+            console.log('modal is shown');
+        },
+        onToggle: () => {
+            console.log('modal has been toggled');
+        },
+    };
 
-		// instance options object
-		const instanceOptions = {
-			id: 'view_contact_modal',
-			override: true
-		};
+    // instance options object
+    const instanceOptions = {
+        id: 'view_contact_modal',
+        override: true
+    };
 
-		const contactModal = new Modal(viewContactModal, options, instanceOptions)
 
-		function openContactModal() {
-			contactModal.show();
-		}
 
-		async function loadContactData(id) {
+    const contactModal = new Modal(viewContactModal, options, instanceOptions);
 
-			openContactModal();
-			console.log(id);
-			fetch(`http://localhost:5000/api/contacts/${id}`)
-				.then(async (response) => {
-					const data = await response.json()
-					console.log(data)
-					document.querySelector("#contact_name").innerHTML = data.name
-					document.querySelector("#contact_email").innerHTML = data.email
-										
-					return data;
-				}).catch((error) => {
-					console.log(error);
-				})
-		}
+    function openContactModal() {
+        contactModal.show();
+    }
 
-	</script>
+    function Email(email){
+
+        openContactModal();
+
+        viewContactModal.innerHTML =   `
+    <div class="relative w-full max-w-md bg-white rounded-lg shadow-lg dark:bg-gray-700">
+        <!-- Email Form Content -->
+        <div class="flex flex-col items-center py-6">
+            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Send an Email</h3>
+
+            <!-- Email Form -->
+            <form id="email_form" class="w-full space-y-4">
+                <input type="email" id="recipient_email" placeholder="Recipient's Email" class="w-full p-2 border border-gray-300 rounded-lg text-red" required>
+                <input type="text" id="email_subject" placeholder="Subject" class="w-full p-2 border border-gray-300 rounded-lg" required>
+                <textarea id="email_message" placeholder="Message" class="w-full p-2 border border-gray-300 rounded-lg" rows="4" required></textarea>
+
+                <div class="flex justify-between items-center">
+                    <button  onclick="sendEmail()"  type="submit" class="text-white bg-blue-700 hover:bg-blue-800 rounded-lg text-sm px-5 py-2.5">Send Email</button>
+                    <button type="button" class="text-white bg-gray-700 hover:bg-gray-800 rounded-lg text-sm px-5 py-2.5" onclick="closeEmailModal()">Close</button>
+                </div>
+            </form>
+        </div>
+    </div>`;
+  // Get the recipient email input field
+    const recipientEmailInput = document.getElementById("recipient_email");
+
+    // Set the value of the input field to the passed email
+    recipientEmailInput.value = email;
+
+    // Disable the input field to prevent editing
+    recipientEmailInput.disabled = true;
+    // text to green
+    document.getElementById("recipient_email").style.color = "green";
+    document.getElementById("email_subject").style.color = "cyan";
+    document.getElementById("email_message").style.color = "blue";
+
+
+    }
+
+    async function sendEmail() {
+    console.log("Inside sendEmail()");
+    // Get the form values
+    const recipientEmail = document.getElementById("recipient_email").value;
+    const subject = document.getElementById("email_subject").value;
+    const message = document.getElementById("email_message").value;
+
+    // Prepare the request payload
+    const payload = {
+        recipientEmail: recipientEmail,
+        subject: subject,
+        message: message
+    };
+
+    try {
+        // Send the email to the backend API
+        const response = await fetch("/api/send-email", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(payload)
+        });
+        console.log("inside async function");
+        // Check the response status
+        const result = await response.json();
+
+       // Create the message container dynamically
+const messageContainer = document.createElement("div");
+messageContainer.classList.add("text-center", "px-4", "py-2", "rounded-lg");
+
+// Add success or error message based on your condition
+messageContainer.classList.add("bg-green-500", "text-white"); // success message
+messageContainer.textContent = "Email sent successfully!"; // example success message
+
+// Insert the message container above the form content
+viewContactModal.querySelector(".relative").insertBefore(messageContainer, viewContactModal.querySelector(".relative").firstChild);
+
+
+    } catch (error) {
+        // Handle error in sending the request
+        console.error("Error sending email:", error);
+        const errorMessage = document.createElement("div");
+        errorMessage.classList.add("text-center", "px-4", "py-2", "bg-red-500", "text-white", "rounded-lg");
+        errorMessage.textContent = "An unexpected error occurred. Please try again.";
+        const modalContent = document.querySelector("#email_modal .relative");
+        modalContent.insertBefore(errorMessage, modalContent.firstChild);
+    }
+}
+
+
+function closeEmailModal() {
+<!--    viewContactModal.classList.add("hidden");-->
+        window.location.href = "http://localhost:5000/user/contacts";
+
+}
+
+
+
+
+
+    async function loadContactData(id) {
+
+        openContactModal();
+        console.log(id);
+        fetch(`http://localhost:5000/api/contacts/${id}`)
+            .then(async (response) => {
+                const data = await response.json()
+                console.log(data)
+                document.querySelector("#contact_name").innerHTML = data.name;
+                document.querySelector("#contact_email").innerHTML = data.email;
+                document.querySelector("#contact_phone").innerHTML = data.phoneNumber;
+                document.querySelector("#contact_location").innerHTML = data.address;
+                document.querySelector("#contact_notes").innerHTML = data.description;
+                document.querySelector("#profile_image").src= data.picture;
+                document.querySelector('#contact_website').href= data.websiteLink;
+                document.querySelector('#contact_linkedin').href= data.linkedinLink;
+                document.querySelector('#contact_facebook').href= data.facebookLink;
+                document.querySelector('#website').innerHTML = data.websiteLink;
+                document.querySelector('#linkedin').innerHTML = data.linkedinLink;
+                document.querySelector('#facebook').innerHTML = data.facebookLink;
+
+
+                favorite = data.favorite;
+                var starsContainer = document.getElementById("stars_container");
+                starsContainer.innerHTML = ""; // Clear any existing stars
+                for (let i = 0; i < 5; i++) {
+                    const star = document.createElement("span");
+                    star.innerHTML = favorite
+                    ? `<svg xmlns="http://www.w3.org/2000/svg" fill="gold" viewBox="0 0 24 24" width="24" height="24">
+                       <path d="M12 .587l3.668 7.431L24 9.511l-6 5.841L19.336 24 12 20.155 4.664 24 6 15.352 0 9.511l8.332-1.493L12 .587z" />
+                    </svg>` // Filled star for favorite
+                : `<svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="gray" viewBox="0 0 24 24" width="24" height="24">
+                <path d="M12 2l3.09 6.26 6.91.99-5 4.87L17.18 22 12 18.27 6.82 22l1.18-6.88-5-4.87 6.91-.99L12 2z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>`; // Outline star for not favorite
+
+                starsContainer.appendChild(star);
+            }
+
+
+
+
+                return data;
+            }).catch((error) => {
+                console.log(error);
+            })
+    }
+
+    // contacts.html
+    console.log('contacts.html loaded');
+    function confirmDelete() {
+      // Show confirmation dialog
+      const userConfirmed = confirm("Are you sure you want to delete contact?");
+      if(userConfirmed) return true;
+      return false;
+    }
+
+
+
+
+
+
+</script>
 </body>
 
 </html>

@@ -1,12 +1,11 @@
 package com.roshan.controller;
+import jakarta.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.roshan.entity.Users;
@@ -22,6 +21,7 @@ public class PageController {
     private IUserService service;
     @Autowired
     private PasswordEncoder encoder;
+
     @GetMapping("/home")
     public String showHome(Model model) {
         model.addAttribute("name", "Rn Dai");
@@ -48,6 +48,7 @@ public class PageController {
     public String showContact() {
         return "contact";
     }
+
     @GetMapping("/login")
     public String showLogin(Model model) {
         User user = new User();
@@ -122,6 +123,30 @@ public class PageController {
                 attrs.addFlashAttribute("message", message);
                 return "redirect:/register";
             }
+            String email = user.getEmail();
+
+            // Regular expression to validate email
+            String emailRegex = "^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,6}$";
+            String phoneRegex = "^[0-9]{10}$";
+            String phoneNumber = user.getPhoneNumber();
+
+
+            if (!(email != null && email.matches(emailRegex))) {
+                model.addAttribute("user", user);
+                Message message = Message.builder().content("Invalid email!")
+                        .type(MessageType.red).build();
+                attrs.addFlashAttribute("message", message);
+                return "redirect:/register";
+
+            }
+
+            if (phoneNumber == null || !phoneNumber.matches(phoneRegex)) {
+                model.addAttribute("user", user);
+                Message message = Message.builder().content("Invalid phone number!")
+                        .type(MessageType.red).build();
+                attrs.addFlashAttribute("message", message);
+                return "redirect:/register";
+            }
             // Check if the email already exists using the isUserExistByEmail method
             if (service.isUserExistByEmail(user.getEmail())) {
                 System.out.println("Email is existing");
@@ -164,4 +189,6 @@ public class PageController {
             return "redirect:/register";
         }
     }
+
+
 }

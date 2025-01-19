@@ -1,0 +1,46 @@
+<html xmlns:th="http://www.thymeleaf.org" th:replace="~{base :: parent(~{::#content},~{::title})}">
+
+<head>
+  <title>All Your Email</title>
+</head>
+
+<body>
+
+<div id='content' class="flex  space-between">
+  <div data-th-replace="user/sidebar :: sidebar"></div>
+  <div class="max-w-md mx-auto mt-10">
+    <!-- Dark Mode Toggle -->
+
+    <h2 class="text-2xl font-bold mb-4 text-gray-700 dark:text-gray-200">Send Email</h2>
+    <form th:action="@{'/user/contacts/send-email?email='+${email}+'&subject='+${subject}+'&message='+${message}}" method="GET" class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+      <!-- Recipient's Email -->
+      <div th:if="${message}">
+          <h3 data-th-text="${message}">
+          </h3></div>
+      <div class="mb-4 ">
+        <label  class="block text-sm font-medium text-gray-700 dark:text-gray-300">Recipient's Email</label>
+        <input style="width:300px" readonly th:value="${email}" type="email" id="email" name="email" class="  mt-1 p-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-200 focus:ring focus:ring-blue-200 dark:focus:ring-blue-700 focus:border-blue-500 dark:focus:border-blue-500" placeholder="Enter recipient's email" required>
+      </div>
+      <!-- Subject -->
+      <div class="mb-4">
+        <label for="subject" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Subject</label>
+        <input type="text" id="subject" name="subject" class="block w-full mt-1 p-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-200 focus:ring focus:ring-blue-200 dark:focus:ring-blue-700 focus:border-blue-500 dark:focus:border-blue-500" placeholder="Enter subject" required>
+      </div>
+      <!-- Message -->
+      <div class="mb-4">
+        <label for="message" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Message</label>
+        <textarea id="message" name="message" rows="5" class="block w-full mt-1 p-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-200 focus:ring focus:ring-blue-200 dark:focus:ring-blue-700 focus:border-blue-500 dark:focus:border-blue-500" placeholder="Enter your message" required></textarea>
+      </div>
+      <!-- Submit Button -->
+      <button type="submit" class="w-full bg-blue-500 text-white font-medium py-2 px-4 rounded-lg hover:bg-blue-600 dark:hover:bg-blue-700 focus:ring focus:ring-blue-200 dark:focus:ring-blue-700 focus:outline-none">
+        Send Email
+      </button>
+    </form>
+  </div></div>
+<script>
+  console.log('This is running')
+</script>
+
+</body>
+
+</html>

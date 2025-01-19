@@ -10,7 +10,7 @@
                 class="w-full md:w-[90%] lg:w-[90%] xl:w-[90%] max-w-4xl bg-gray-500 text-white text-center p-4">
             <!-- Form to post data to /login -->
             <form  method="post" data-th-action="@{/authenticate}" class="mt-5"
-                  data-th-object="${user}">
+                   data-th-object="${user}">
                 <div
                         class="block p-3 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
                     <div data-th-replace="message :: messagebox"></div>
@@ -21,6 +21,9 @@
                         managing contacts on cloud...</p>
                     <!-- 												Display error message if there's any login failure -->
 
+                    <div th:if="${param.error}">
+                        <p class='text-blue-700 dark:text-green-200' >Invalid username or password.</p>
+                    </div>
                     <div th:if="${param.logout}">
                         <p class='text-blue-700 dark:text-green-200' >You have been successfully logged out.</p>
                     </div>
